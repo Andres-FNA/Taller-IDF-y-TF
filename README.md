@@ -6,44 +6,41 @@
 Este proyecto implementa un motor de búsqueda utilizando el algoritmo TF-IDF, con el objetivo de permitir a los estudiantes encontrar artículos relevantes dentro de un reglamento académico.
 
 # Objetivo
+Desarrollar un sistema que permita a un estudiante encontrar información específica dentro de un reglamento, como:
 
-Construir un sistema que permita buscar información sobre temas como:
-
-Admisión
+Procesos de admisión
 Reserva de cupo
-Transferencias
-Procesos académicos
-
+Transferencias académicas
+Normativas institucionales
 #¿Por qué usar TF-IDF?
 
 Una búsqueda simple solo encuentra palabras sin importar su relevancia.
 
-# TF-IDF permite:
+# ¿Por qué usar TF-IDF?
+Una búsqueda tradicional:
+Solo verifica si una palabra existe en un texto 
+No mide relevancia 
 
-Identificar palabras importantes
-Ignorar palabras comunes
-Ordenar los resultados según relevancia
+TF-IDF mejora esto porque:
+Identifica palabras importantes dentro de un documento 
+Reduce el impacto de palabras comunes 
+Ordena los resultados según relevancia 
 
-#Tecnologías utilizadas
+# Tecnologías utilizadas
 Python
 Algoritmo TF-IDF
 
 # Fórmulas
-
 TF (Term Frequency):
-
 TF = frecuencia_palabra / total_palabras
-
 IDF (Inverse Document Frequency):
-
 IDF = log(N / df)
-# Cómo ejecutar el proyecto
-Clonar repositorio:
-git clone https://github.com/TU-USUARIO/motor-busqueda-tfidf.git
-Entrar a la carpeta:
-cd motor-busqueda-tfidf
-Ejecutar:
-python main.py
+# Funcionamiento del sistema
+Se cargan los documentos del reglamento
+Se limpia el texto (minúsculas, eliminación de tildes y signos)
+Se calcula TF e IDF para cada palabra
+Se calcula un score TF-IDF para cada documento
+Se ordenan los documentos según su relevancia
 
 # Casos de prueba
 
@@ -65,14 +62,21 @@ El sistema muestra los documentos ordenados por relevancia (score TF-IDF), indic
 
 <img width="331" height="244" alt="image" src="https://github.com/user-attachments/assets/1327d814-f8cd-4274-8cc0-df84642532df" />
 
- Limitaciones
+# Análisis de resultados
+
+El sistema permite identificar qué documentos son más relevantes según la consulta del usuario, gracias a la ponderación de términos importantes.
+Además, se pueden observar:
+Palabras con IDF alto → más específicas
+Palabras con IDF bajo → más comunes
+<img width="388" height="270" alt="image" src="https://github.com/user-attachments/assets/0977dec6-0ccc-40d6-b03a-07826d36984e" />
+
+# Limitaciones
 No entiende el contexto
 No reconoce sinónimos
 Sensible a errores ortográficos
 Dataset pequeño
 
-El sistema se puede integrar en un flujo RAG de la siguiente forma:
-
+# El sistema se puede integrar en un flujo RAG de la siguiente forma:
 Usuario hace una consulta
 TF-IDF busca documentos relevantes
 Se envían al modelo de lenguaje (LLM)

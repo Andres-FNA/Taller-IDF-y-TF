@@ -140,7 +140,7 @@ queries = [
     "documentos aspirante admision",
     "proceso admision resultados",
     "transferencias homologacion asignaturas",
-    "creditos homologables porcentaje"
+
 ]
 
 probar_queries(queries, documentos)

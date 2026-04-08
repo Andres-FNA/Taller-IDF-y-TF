@@ -1,11 +1,11 @@
 # Taller-IDF-y-TF
 
 
-#Descripción
+# Descripción
 
 Este proyecto implementa un motor de búsqueda utilizando el algoritmo TF-IDF, con el objetivo de permitir a los estudiantes encontrar artículos relevantes dentro de un reglamento académico.
 
-#Objetivo
+# Objetivo
 
 Construir un sistema que permita buscar información sobre temas como:
 
@@ -18,7 +18,7 @@ Procesos académicos
 
 Una búsqueda simple solo encuentra palabras sin importar su relevancia.
 
-#TF-IDF permite:
+# TF-IDF permite:
 
 Identificar palabras importantes
 Ignorar palabras comunes
@@ -28,7 +28,7 @@ Ordenar los resultados según relevancia
 Python
 Algoritmo TF-IDF
 
-#Fórmulas
+# Fórmulas
 
 TF (Term Frequency):
 
@@ -45,7 +45,7 @@ cd motor-busqueda-tfidf
 Ejecutar:
 python main.py
 
-#Casos de prueba
+# Casos de prueba
 
 Ejemplos de consultas:
 

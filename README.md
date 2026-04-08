@@ -58,10 +58,6 @@ transferencias homologacion asignaturas
 <img width="921" height="224" alt="image" src="https://github.com/user-attachments/assets/2b38ac26-3d38-4d5e-832c-0670cb1e4448" />
 
 
-El sistema muestra los documentos ordenados por relevancia (score TF-IDF), indicando los más importantes según la consulta.
-
-<img width="331" height="244" alt="image" src="https://github.com/user-attachments/assets/1327d814-f8cd-4274-8cc0-df84642532df" />
-
 # Análisis de resultados
 
 El sistema permite identificar qué documentos son más relevantes según la consulta del usuario, gracias a la ponderación de términos importantes.
